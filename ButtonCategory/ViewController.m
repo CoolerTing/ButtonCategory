@@ -27,15 +27,14 @@
     [dq_button setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     dq_button.layoutType = DQImageTop;
     dq_button.space = 20;
-    dq_button.alignment = DQAlignmentTop;
+//    dq_button.alignment = DQAlignmentBottom;
     dq_button.imageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.view addSubview:dq_button];
     
     [dq_button mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(10);
-        make.top.mas_equalTo(100);
-        make.right.mas_equalTo(-10);
+        make.center.mas_equalTo(self.view);
         make.height.mas_equalTo(300);
+        make.width.mas_equalTo(300);
     }];
 }
 
